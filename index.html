@@ -14,6 +14,10 @@ el atributo lang define el tipo de lenguaje-->
 
 <body><!-- Es el cuerpo del documento donde va a estar todo el contenido que queremos mostrar-->
     <!-- Etiqueta de Heading sirve para crear títulos-->
+
+    <nav>
+        <a href="#h1">Titulos y párrafos : </a><a href="#vinculos">Vinculos : </a><a href="#listas">Listas : </a><a href="#tablas">Tablas : </a><a href="#iframes">Iframes : </a><a href="#formularios">Formularios</a>
+    </nav>
     <h1 id="h1">Hola Mundo!</h1>
     <h1>Soy un titulo</h1>
     <h2>Soy un titulo</h2>
@@ -38,7 +42,7 @@ el atributo lang define el tipo de lenguaje-->
         elit. In corporis rerum sapiente blanditiis velit labore?</p>
     <hr>
     
-    <h2>Clase II</h2>
+    <h2 id="vinculos">Vínculos</h2>
     <a href="www.google.com">Ir a Google (no funciona)</a><br><!--Este vinculo no funciona-->
     <a href="https://www.google.com" target="_blank">Ir a Google</a><br><br><br><!--Este vinculo funciona-->
 
@@ -56,7 +60,10 @@ el atributo lang define el tipo de lenguaje-->
         title="Acá se ve el logo de HTML" alt="Logo HTML"><br><br><br>
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.pnge"
-        title="Acá NO se ve el logo de HTML" alt="Logo HTML">
+        title="Acá NO se ve el logo de HTML" alt="Logo HTML"><br><br><br>
+
+
+    <a href="./docs/2025  Desarrollo de Aplicaciones para dispositivos móviles .pdf">Descargar archivo</a>
 
     <br><br><br><br>
 
@@ -73,7 +80,7 @@ el atributo lang define el tipo de lenguaje-->
             width="200"></a>
 
     <br><br><br><br>
-    <h2>Listas</h2>
+    <h2 id="listas">Listas</h2>
     <h3>Listas desordenadas</h3>
     <ul><!--ul sirve para crear listas desordenadas-->
         <li>Listas</li>
@@ -105,7 +112,7 @@ el atributo lang define el tipo de lenguaje-->
         <dd>Consume combustible</dd>
     </dl>
 
-    <h2>Tablas</h2>
+    <h2 id="tablas">Tablas</h2>
 
     <table border="1" id="table">
         <tr>
@@ -135,7 +142,7 @@ el atributo lang define el tipo de lenguaje-->
         </tr>
     </table>
 
-<h2>Iframes</h2><!--Los iframes son elementos que permiten insertar documentos html dentro de otros
+<h2 id="iframes">Iframes</h2><!--Los iframes son elementos que permiten insertar documentos html dentro de otros
 documentos html-->
 
 <ul><!--la lista se vincula con el iframe a traves del target y el name-->
@@ -147,7 +154,138 @@ documentos html-->
 <iframe name="ventana" id="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.4719826081155!2d-58.394723123530504!3d-34.61751115822797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccade51ac2f05%3A0x412d9275d44ddba8!2sIFTS%20N%C2%B024!5e0!3m2!1ses!2sar!4v1743030593897!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 <br>
 
+<hr>
+
+<h2 id="formatos">Formatos de texto (no se usa, se lo pueden encontrar)</h2>
+
+<p>b: <b>Estilo negrita</b></p>
+<p>strong: <strong>Estilo negrita</strong></p>
+<p>cursiva: <i>Estilo cursiva</i></p>
+<p>enfasis: <em>Estilo enfasis</em></p>
+<p>subrayado: <u>Estilo subrayado</u></p>
+<p>small: <small>Estilo subrayado</small></p>
+<p>big: <big>Estilo subrayado</big></p>
+<p>superindice; Estilo<sup>Superindice</sup></p>
+<p>subindice; Estilo<sub>Superindice</sub></p>
+<p>del: <del>Estilo tachado</del></p>
+<p>cite: <cite>Estilo cita</cite></p>
+
+
 <a href="#h1">Ir para arriba</a>
+
+
+<hr>
+<h2 id="formularios">Formularios </h2>
+
+<form action="mailto:mail@mail.com?subject=Desde%20formulario" method="POST" enctype="text/plain">
+
+    <h3>Texto</h3>
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" placeholder="Escriba su nombre" required><br><br>
+
+    <label for="apellido">Apellido: </label>
+    <input type="text" id="apellido"><br><br>
+
+    <label for="pass">Password: </label>
+    <input type="password" id="pass"><br><br>
+
+    <label for="mail">Mail: </label>
+    <input type="email" id="email"><br><br>
+
+    <label>Telefono con formato (123)456-7890: </label>
+    (<input id="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" size="1" maxlength="3">) -
+    <input type="tel" name="tel2" pattern="[0-9]{4}" placeholder="####" size="2" maxlength="4"> -
+    <input type="tel" name="tel3" pattern="[0-9]{4}" placeholder="####" size="2" maxlength="4"><br></br>
+
+
+    <h3>Numéricos</h3>
+
+    <label for="numero">Precio $: </label>
+    <input type="number" id="numero" min="0" step="0.1" max="5"><br><br>
+
+    <label for="slider">Nivel: </label>
+    <input type="range" id="slider" min="1" max="10" value="5">
+    <output for="slider" class="slider-output"></output><br><br>
+
+    <h3>Fecha y Hora</h3>
+
+    <label for="fechaYHora">Fecha y Hora: </label>
+    <input type="datetime-local" id="fechaYHora"><br><br>
+
+    <label for="mes">Mes: </label>
+    <input type="month" id="mes"><br><br>
+
+    <label for="semana">Semana: </label>
+    <input type="week" id="semana"><br><br>
+
+    <label for="dia">Dia: </label>
+    <input type="date" id="dia" step="2"><br><br>
+
+    <h3>Checkbox</h3>
+
+    <input type="checkbox" id="tyc">
+    <label for="tyc" id="labelTyc">Aceptar términos y condiciones</label><br>
+
+    <input type="checkbox" id="tyc2">
+    <label for="tyc2">Aceptar términos y condiciones</label>
+
+    <h3>Color picker</h3>
+
+    <label for="color">Elija color: </label>
+    <input type="color" id="color">
+
+
+    <h3>Radio buttons</h3>
+
+    <input type="radio" name="radio" id="radio1">
+    <label for="radio1">Opcion 1</label> 
+    <input type="radio" name="radio" id="radio2">
+    <label for="radio2">Opcion 2</label> 
+    <input type="radio" name="radio" id="radio3" checked>
+    <label for="radio3">Opcion 3</label>
+
+    <h3>Select</h3>
+    <select name="selctor" id="selector">
+       <option value="0" disabled selected>Elija una opcion</option>
+       <option value="1">Opcion 1</option>
+       <option value="2">Opcion 2</option>
+       <option value="3">Opcion 3</option> 
+    </select><br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+</form>
+
+
+
+
+
+
+
+
+
 </body>
 
+
 </html>
+
+
+<script>
+    const nivel = document.querySelector("#slider");
+    const output = document.querySelector(".slider-output")
+
+    output.textContent = nivel.value;
+
+    nivel.addEventListener("input", function() {
+        output.textContent = slider.value
+    })
+
+    const colorPicker = document.getElementById("color");
+    const labelTyc = document.getElementById("labelTyc");
+
+    colorPicker.addEventListener('input', function() {
+        const selectedColor = colorPicker.value;
+        labelTyc.style.color = selectedColor;
+    })
+
+</script>
